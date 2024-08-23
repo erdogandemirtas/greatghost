@@ -25,8 +25,8 @@ public class bg : MonoBehaviour
 
     IEnumerator YukarıAta()
     {
-        yield return new WaitForSeconds(1.2f); // 1 saniye bekle
-        transform.position = transform.position + new Vector3(0, 15.3f, 0);
+        yield return new WaitForSeconds(1.5f); // saniye bekle
+        transform.position = transform.position + new Vector3(0, 20.4f, 0);
         float xPoz = Random.Range(-0.85f, 0.85f);
         towers.transform.localPosition = new Vector3(xPoz, 0, 0);
     }

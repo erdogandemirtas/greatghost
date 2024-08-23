@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using TMPro;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
@@ -9,8 +10,8 @@ public class GhostScript : MonoBehaviour
     public GameObject canvas;  // Oyun sonu ekranı
     public GameObject canvas1;  // Oyun içi ekran
     public AudioClip[] sesDosyalari;  // Ses dosyaları: 0 = puan alma sesi, 1 = oyun sonu sesi
-    public Text rekor;  // Rekor puanı gösteren UI Text
-    public Text puanText;  // Güncel puanı gösteren UI Text
+    public TextMeshProUGUI rekor;  // Rekor puanı gösteren UI Text
+    public TextMeshProUGUI puanText;  // Güncel puanı gösteren UI Text
 
     void Start()
     {
