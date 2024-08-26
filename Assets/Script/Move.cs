@@ -3,7 +3,7 @@
 public class Move : MonoBehaviour
 {
     private Rigidbody2D rb;
-    public float moveSpeed = 10f; // moveSpeed'i public yaparak Unity Editörü üzerinden ayarlayabilirsiniz
+    public float moveSpeed = 10f;
 
     void Start()
     {
@@ -18,9 +18,11 @@ public class Move : MonoBehaviour
     {
         if (rb != null)
         {
-            // Mobil cihazın eğim sensörlerini kullanarak yatay hareketi al
-            float dirX = Input.acceleration.x * moveSpeed;
-            rb.linearVelocity = new Vector2(dirX, rb.linearVelocity.y); // rb.velocity.y'yi koruyarak sadece x ekseninde hareketi değiştirme
+            // Eski Input sistemi ile eğim sensörü verilerini al
+            Vector3 acceleration = Input.acceleration;
+
+            float dirX = acceleration.x * moveSpeed;
+            rb.linearVelocity = new Vector2(dirX, rb.linearVelocity.y);
         }
     }
 }
